@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    flex-direction: column;
+  }
+
+  .box {
+    background-color: gold;
+    height: 300px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: 200ms linear;
+  }
+
+  .true {
+    background-color: green;
+    transform: scale(1.05);
+  }
+
+  .false {
+    transition: 100ms linear;
+    background-color: rgb(245, 17, 17);
+    transform: scale(1.1);
+  }
+
+  h1 {
+    font-size: 40px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    font-weight: 800;
+  }
+
+  button {
+    margin-top: 70px;
+    font-size: 17px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode",
+      'Lucida Grande", "Lucida Sans', Arial, sans-serif;
+    font-weight: 800;
+    width: 100px;
+    height: 40px;
+    background-color: gold;
+    border-radius: 10px;
+    border: solid 2px rgb(255, 255, 255);
+    cursor: pointer;
+  }
+
+  @media (max-width:500px){
+    .box{
+        transform: scale(0.8);
+    }
+    .true{
+        transform: scale(0.9);
+
+    }
+    .false{
+        transform: scale(0.95);
+        
+    }
+  }
