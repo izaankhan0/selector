@@ -19,5 +19,6 @@ function clicker() {
     setTimeout(() => {
         box.classList.remove("true");
         box.classList.remove("false");
+        box.innerHTML = "<h1>Press</h1>"
     }, 5000);
 }
