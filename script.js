@@ -3,14 +3,21 @@ function clicker() {
 
     console.log(percentage);
 
-    document.querySelector(".box").classList.remove("true");
-    document.querySelector(".box").classList.remove("false");
+    const box = document.querySelector(".box");
+    box.classList.remove("true");
+    box.classList.remove("false");
 
     if (percentage > 50) {
-      document.querySelector(".box").innerHTML = "<h1>Tell Truth </h1>";
-      document.querySelector(".box").classList.add("true");
+        box.innerHTML = "<h1>Tell Truth </h1>";
+        box.classList.add("true");
     } else {
-      document.querySelector(".box").innerHTML = "<h1>Lie </h1>";
-      document.querySelector(".box").classList.add("false");
+        box.innerHTML = "<h1>Lie </h1>";
+        box.classList.add("false");
     }
-  }
+
+    // Delayed removal of classes after 5 seconds
+    setTimeout(() => {
+        box.classList.remove("true");
+        box.classList.remove("false");
+    }, 5000);
+}
